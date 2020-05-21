@@ -1,6 +1,11 @@
-const canvas = document.getElementById("myCanvas");
-const ctx = canvas.getContext("2d");
-ctx.fillRect(0, 0, 400, 400);
+const canvas = document.querySelector('canvas');
+const width = window.innerWidth;
+const height = window.innerHeight;
+canvas.width = width;
+canvas.height = height;
+
+const ctx = canvas.getContext('2d');
+ctx.fillRect(0, 0, width, height);
 
 addEventListener("mousedown", function(e) {
 	const rect = canvas.getBoundingClientRect();

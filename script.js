@@ -1,13 +1,19 @@
 const canvas = document.querySelector('canvas');
-const width = window.innerWidth;
-const height = window.innerHeight;
+var width = window.innerWidth;
+var height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
 const ctx = canvas.getContext('2d');
-ctx.fillRect(0, 0, width, height);
 
-addEventListener("mousedown", function(e) {
+window.addEventListener('resize', () => {
+	width = window.innerWidth;
+	height = window.innerHeight;
+	canvas.width = width;
+	canvas.height = height;
+});
+
+window.addEventListener("mousedown", function(e) {
 	const rect = canvas.getBoundingClientRect();
 	const x = e.clientX - rect.left;
 	const y = e.clientY - rect.top;

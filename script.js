@@ -30,3 +30,8 @@ window.addEventListener("mousedown", function(e) {
 		ctx.stroke();
 	}
 });
+
+function download() {
+	const image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+	window.location.href = image;
+}

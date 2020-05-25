@@ -16,6 +16,19 @@
 				display: block;
 				background-color: black;
 			}
+			#option {
+				position: absolute;
+				width: 100%;
+				height: 100px;
+				bottom: 0;
+				padding-left: 80px;
+			}
+			#description {
+				color: #AAA;
+			}
+			button {
+				padding: 3px;
+			}
 		</style>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -30,6 +43,10 @@
 	</head>
 	<body>
 		<canvas></canvas>
+		<div id='option'>
+			<label id='description'>Click anywhere to put circles.</label> <br />
+			<button onclick="download()">Download</button>
+		</div>
 		<script type="text/javascript" src="script.js"></script>
 	</body>
 </html>
